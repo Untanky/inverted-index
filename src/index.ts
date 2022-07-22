@@ -1,6 +1,7 @@
-const helloWorld = () => {
-  console.log('Hello World');
-  console.log('VERY LONG LINE!!!!!!!!!!!!!!!!!!!!!!!!!111111111111111222222211111112121212121213wqqqqqqq111111111');
-};
+import ExpressApp from './core/express/express-app';
+import { ConsoleLogger } from './core/console-logger';
 
-helloWorld();
+const defaultLogger = new ConsoleLogger();
+
+const app = new ExpressApp(defaultLogger);
+app.start();
