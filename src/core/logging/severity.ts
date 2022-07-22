@@ -3,5 +3,5 @@ export enum LogSeverity {
   WARNING = 'warning',
   INFO = 'info',
   DEBUG = 'debug',
-  VERBOSE = 'verbose',
+  VERBOSE = 'verbose'
 }
