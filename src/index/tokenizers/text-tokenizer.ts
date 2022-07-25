@@ -1,4 +1,6 @@
-export class TextTokenizer<Position = number> {
+import { Tokenizer } from '../tokenizer';
+
+export class TextTokenizer<Position = number> implements Tokenizer<string, Position> {
   constructor(private separator: string[]) { }
 
   tokenize(value: string): Map<string, Position[]> {
