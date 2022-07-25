@@ -3,9 +3,9 @@
  * 
  * Implementation and token map depends on type of a document. 
  * A string is tokenized differently to a number.
- * Compount types like objects and arrays are result in more complex positional types.
+ * Compount types like objects and arrays are result in more complex identifier types.
  * 
  */
-export interface Tokenizer<Document, Position, TokenMap = Map<string, Position[]>> {
-  tokenize(document: Document, basePosition: Position): TokenMap;
+export interface Tokenizer<Document, Identifier, TokenMap = Map<string, Identifier[]>> {
+  tokenize(document: Document, baseIdentifier: Identifier): TokenMap;
 }
