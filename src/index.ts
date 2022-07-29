@@ -4,6 +4,7 @@ import { ObjectTokenizer } from './index/tokenizers/object-tokenizer';
 import { Merge } from './index/merge';
 import { Identifier } from './index/identifier';
 import { GenericTokenizer } from './index/tokenizers/generic-tokenizer';
+import { ArrayTokenizer } from './index/tokenizers/array-tokenizer';
 
 class Merger implements Merge<Map<string, Identifier[]>> {
   merge(baseIndex: Map<string, Identifier[]>, mergedIndex: Map<string, Identifier[]>): Map<string, Identifier[]> {
@@ -28,14 +29,17 @@ export const createGenericTokenizer = <Document>(): GenericTokenizer<Document> =
   
   const objectTokenizer = new ObjectTokenizer(new Merger(), genericTokenizer);
   genericTokenizer.addTokenizer('object', objectTokenizer);
+  
+  const arrayTokenizer = new ArrayTokenizer(new Merger(), genericTokenizer);
+  genericTokenizer.addTokenizer('array', arrayTokenizer);
 
   return genericTokenizer;
 }
 
 const result = createGenericTokenizer<object>().tokenize(
   {
-    foo: 'Lorem ipsum foo',
-    bar: 'ipsum Lorem bar',
+    foo: [ 'Lorem ipsum foo', { bar: 'ipsum Lorem bar' } ],
+    baz: 'baz',
   },
   new BaseIdentifier('abc'),
 );
