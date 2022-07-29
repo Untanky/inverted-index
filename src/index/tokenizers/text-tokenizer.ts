@@ -1,16 +1,6 @@
-import { DecoratorIdentifier } from '../decorator-identifier';
 import { Identifier } from '../identifier';
 import { Tokenizer } from '../tokenizer';
-
-class TextIdentifier extends DecoratorIdentifier {
-  constructor(readonly position: number, identifier: Identifier) {
-    super(identifier)
-  }
-
-  serialize(): string {
-    return `${this.identifier.serialize()}@${this.position}`;
-  }
-}
+import { TextIdentifier } from '../identifiers/text-identifier';
 
 export class TextTokenizer implements Tokenizer<string, TextIdentifier> {
   constructor(private separator: string[]) { }
@@ -28,6 +18,9 @@ export class TextTokenizer implements Tokenizer<string, TextIdentifier> {
         currentIndex = i + 1;
       }
     }
+
+    const currentString = value.slice(currentIndex);
+    this.handleEndOfToken(currentString, new TextIdentifier(currentIndex, baseIdentifier), tokenMap);
 
     return tokenMap;
   }
