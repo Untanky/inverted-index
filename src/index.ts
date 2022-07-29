@@ -1,5 +1,5 @@
 import { createGenericTokenizer } from './create-generic-tokenizer';
-import { BaseIdentifier } from './index/identifiers/base-identfier';
+import { BaseIdentifier } from './indexer/identifiers/base-identfier';
 
 const result = createGenericTokenizer<object>().tokenize(
   {

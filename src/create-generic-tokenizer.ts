@@ -1,8 +1,8 @@
-import { TextTokenizer } from './index/tokenizers/text-tokenizer';
-import { ObjectTokenizer } from './index/tokenizers/object-tokenizer';
-import { GenericTokenizer } from './index/tokenizers/generic-tokenizer';
-import { ArrayTokenizer } from './index/tokenizers/array-tokenizer';
-import { BaseMerge } from './index/mergers/base-merger';
+import { TextTokenizer } from './indexer/tokenizers/text-tokenizer';
+import { ObjectTokenizer } from './indexer/tokenizers/object-tokenizer';
+import { GenericTokenizer } from './indexer/tokenizers/generic-tokenizer';
+import { ArrayTokenizer } from './indexer/tokenizers/array-tokenizer';
+import { BaseMerge } from './indexer/mergers/base-merger';
 
 export const createGenericTokenizer = <Document>(): GenericTokenizer<Document> => {
   const genericTokenizer = new GenericTokenizer<Document>();

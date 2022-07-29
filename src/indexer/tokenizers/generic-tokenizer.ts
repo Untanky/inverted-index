@@ -1,8 +1,6 @@
 import { Identifier } from '../interfaces/identifier';
 import { Tokenizer } from '../interfaces/tokenizer';
 
-const foo = typeof 'st';
-
 type types = 'string' | 'object' | 'array' | 'number';
 
 export class GenericTokenizer<Document> implements Tokenizer<Document, Identifier> {
