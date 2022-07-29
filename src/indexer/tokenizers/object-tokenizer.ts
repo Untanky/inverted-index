@@ -1,7 +1,7 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 import { ObjectIdentifier } from '../identifiers/object-identifier';
-import { Merge } from '../merge';
-import { Tokenizer } from '../tokenizer';
+import { Merge } from '../interfaces/merge';
+import { Tokenizer } from '../interfaces/tokenizer';
 
 export class ObjectTokenizer implements Tokenizer<Record<string, string>, ObjectIdentifier> {
   constructor(private merger: Merge<Map<string, Identifier[]>>, private textTokenizer: Tokenizer<unknown, Identifier>) { }

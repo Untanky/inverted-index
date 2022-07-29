@@ -1,7 +1,7 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 import { ArrayIdentifier } from '../identifiers/array-identifier';
-import { Merge } from '../merge';
-import { Tokenizer } from '../tokenizer';
+import { Merge } from '../interfaces/merge';
+import { Tokenizer } from '../interfaces/tokenizer';
 
 export class ArrayTokenizer implements Tokenizer<Array<unknown>, ArrayIdentifier> {
   constructor(private merger: Merge<Map<string, Identifier[]>>, private tokenizer: Tokenizer<unknown, Identifier>) { }

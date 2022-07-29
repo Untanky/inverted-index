@@ -1,5 +1,5 @@
-import { Identifier } from '../identifier';
-import { Tokenizer } from '../tokenizer';
+import { Identifier } from '../interfaces/identifier';
+import { Tokenizer } from '../interfaces/tokenizer';
 
 const foo = typeof 'st';
 
