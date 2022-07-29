@@ -1,4 +1,4 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 
 export class BaseIdentifier implements Identifier {
   constructor(readonly documentId: string) {}

@@ -1,4 +1,4 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 import { ArrayIdentifier } from '../identifiers/array-identifier';
 import { Merge } from '../merge';
 import { Tokenizer } from '../tokenizer';

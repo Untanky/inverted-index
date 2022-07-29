@@ -1,4 +1,4 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 import { ObjectIdentifier } from '../identifiers/object-identifier';
 import { Merge } from '../merge';
 import { Tokenizer } from '../tokenizer';

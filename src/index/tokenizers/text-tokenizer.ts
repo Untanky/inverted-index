@@ -1,4 +1,4 @@
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 import { Tokenizer } from '../tokenizer';
 import { TextIdentifier } from '../identifiers/text-identifier';
 

@@ -1,5 +1,5 @@
 import { DecoratorIdentifier } from './decorator-identifier';
-import { Identifier } from '../identifier';
+import { Identifier } from '../interfaces/identifier';
 
 export class ArrayIdentifier extends DecoratorIdentifier {
   constructor(readonly index: number, identifier: Identifier) {
